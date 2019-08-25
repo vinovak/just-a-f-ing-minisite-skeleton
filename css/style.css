@@ -1,0 +1,204 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  scroll-behavior: smooth;
+  position: relative; /* Required by Bootstrap's Scrollspy */
+}
+
+.jafms-red {
+  color: red;
+}
+
+.jafms-green {
+  color: green;
+}
+
+.jafms-vbottom {
+  display: table-cell;
+  text-align: center;
+  vertical-align: bottom;
+  padding-bottom: 50px;
+}
+
+.jafms-vmiddle {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.jafms-semitransparent {
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 5px;
+  filter: drop-shadow(10px 10px 20px);
+}
+
+.jafms-vertical-spacing {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.jafms-navbar {
+  background-color: rgba(0, 0, 0, 0.6);
+  filter: drop-shadow(3px 3px 5px);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.jafms-section {
+  padding: 140px 0 50px 0; /* those high values are here to compensate the navbar's height in order to make anchor-based navigation possible */
+  margin: -70px 0 0 0;
+}
+
+.jafms-section-primary {
+  background: url(../graphics/backdrop-white-hexa-1920-min.jpg) repeat-y center;
+  background-color: #fff;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.jafms-section-secondary {
+  background: url(../graphics/backdrop-dark-hexa-1920-min.jpg);
+  background-color: #000;
+  color: #fff;
+}
+
+.jafms-section-textual img {
+  width: 100%;
+}
+
+/* display shadow with desktop/landscape tablet layout only */
+@media (min-width: 768px) {
+  .jafms-shadow {
+    filter: drop-shadow(3px 3px 5px);
+    margin-bottom: 5px;
+    margin-top: 5px;
+  }
+}
+
+.jafms-section-separator {
+  background: url(../graphics/backdrop-dark-1920-min.jpg) no-repeat center;
+  background-color: rgba(34, 24, 15, 0.6);
+  height: 70px;
+  filter: drop-shadow(3px 3px 5px);
+  z-index: 1;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.jafms-section-separator img {
+  position: relative;
+  top: -46px;
+  filter: drop-shadow(3px 3px 5px);
+  z-index: 2;
+}
+
+.jafms-calm-down-strip {
+  background: no-repeat center center fixed;
+  display: table;
+  height: 600px;
+  position: relative;
+  width: 100%;
+  z-index: -1;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#bait {
+  background: url(../graphics/mind-blown-min.jpg) no-repeat center center fixed;
+  display: table;
+  height: 100%;
+  position: relative;
+  width: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#little-break {
+  background-image: url(../graphics/buddha-1920-min.jpg);
+}
+
+#another-break {
+  background-image: url(../graphics/impossible-1920-min.jpg);
+}
+
+#another-break img {
+  width: 20%;
+}
+
+#about {
+  background: url(../graphics/backdrop-dark-hexa-1920-min.jpg) repeat center center fixed;
+  display: table;
+  height: 600px;
+  position: relative;
+  width: 100%;
+  color: #fff;
+  z-index: -1;
+}
+
+@-moz-keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -moz-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40% {
+    -moz-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+  60% {
+    -moz-transform: translateY(-15px);
+    transform: translateY(-15px);
+  }
+}
+@-webkit-keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40% {
+    -webkit-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+  60% {
+    -webkit-transform: translateY(-15px);
+    transform: translateY(-15px);
+  }
+}
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40% {
+    -moz-transform: translateY(-30px);
+    -ms-transform: translateY(-30px);
+    -webkit-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+  60% {
+    -moz-transform: translateY(-15px);
+    -ms-transform: translateY(-15px);
+    -webkit-transform: translateY(-15px);
+    transform: translateY(-15px);
+  }
+}
+
+.arrow {
+}
+
+.bounce {
+  -moz-animation: bounce 2s infinite;
+  -webkit-animation: bounce 2s infinite;
+  animation: bounce 2s infinite;
+}
