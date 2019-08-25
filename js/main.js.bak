@@ -1,0 +1,170 @@
+$(window).scroll(function(){
+    $("#intro-content").css("opacity", 1 - $(window).scrollTop() / 100);
+  });
+
+// triggers when user clicks on thumbnail
+function onThumbnailsClick(e) {
+    e = e || window.event;
+    e.preventDefault ? e.preventDefault() : e.returnValue = false;
+
+    var index = e.getAttribute("data-pswp-uid");
+
+
+    if(index >= 0) {
+        // open PhotoSwipe if valid index found
+        openPhotoSwipe(index, false, false, e);
+    }
+    return false;
+}
+
+// build items array
+var galleryItems = [];
+function openPhotoSwipe(index, disableAnimation, fromURL, thumbnailElement) {
+    var pswpElement = document.querySelectorAll('.pswp')[0],
+        gallery,
+        options,
+        items;
+
+    items = galleryItems;
+
+    // define options (if needed)
+    options = {
+
+        // define gallery index (for URL)
+        galleryUID: 1,
+
+        getThumbBoundsFn: function(index) {
+            // See Options -> getThumbBoundsFn section of documentation for more info
+            var thumbnail = thumbnailElement, // find thumbnail
+                pageYScroll = window.pageYOffset || document.documentElement.scrollTop,
+                rect = thumbnail.getBoundingClientRect();
+
+            return {x:rect.left, y:rect.top + pageYScroll, w:rect.width};
+        }
+
+    };
+
+    // PhotoSwipe opened from URL
+    if(fromURL) {
+        if(options.galleryPIDs) {
+            // parse real index when custom PIDs are used
+            // http://photoswipe.com/documentation/faq.html#custom-pid-in-url
+            for(var j = 0; j < items.length; j++) {
+                if(items[j].pid == index) {
+                    options.index = j;
+                    break;
+                }
+            }
+        } else {
+            // in URL indexes start from 1
+            options.index = parseInt(index, 10) - 1;
+        }
+    } else {
+        options.index = parseInt(index, 10);
+    }
+
+    // exit if index not found
+    if( isNaN(options.index) ) {
+        return;
+    }
+
+    if(disableAnimation) {
+        options.showAnimationDuration = 0;
+    }
+
+    // Pass data to PhotoSwipe and initialize it
+    gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, items, options);
+    gallery.init();
+}
+
+function showGallery(data) {
+  var item;
+
+  for (i = 0; i < Object.keys(data).length; i++) {
+    var newGalleryRow = '<div class="row">';
+
+    newGalleryRow += '<div class="col text-right">';
+    newGalleryRow += '<a href="gallery/' + data[Object.keys(data)[i]].original + '" onclick="return onThumbnailsClick(this);" data-size="' + data[Object.keys(data)[i]].width + 'x' + data[Object.keys(data)[i]].height + '" data-pswp-uid="' + i + '">';
+    newGalleryRow += '<img src="gallery/' + data[Object.keys(data)[i]].thumbnails.fitHeight['250x250'] + '" itemprop="thumbnail" alt="" />';
+    newGalleryRow += '</a>';
+    newGalleryRow += '</div>';
+
+    item = {
+        src: 'gallery/' + data[Object.keys(data)[i]].original,
+        w: data[Object.keys(data)[i]].width,
+        h: data[Object.keys(data)[i]].height,
+        msrc: 'gallery/' + data[Object.keys(data)[i]].thumbnails.fit['400x250']
+    };
+    galleryItems.push(item);
+
+    newGalleryRow += '<div class="col text-center">';
+    if (i + 1 < Object.keys(data).length) {
+      i++;
+      newGalleryRow += '<a href="gallery/' + data[Object.keys(data)[i]].original + '" onclick="return onThumbnailsClick(this);" data-size="' + data[Object.keys(data)[i]].width + 'x' + data[Object.keys(data)[i]].height + '" data-pswp-uid="' + i + '">';
+      newGalleryRow += '<img src="gallery/' + data[Object.keys(data)[i]].thumbnails.fitHeight['250x250'] + '" itemprop="thumbnail" alt="" />';
+      newGalleryRow += '</a>';
+
+      item = {
+          src: 'gallery/' + data[Object.keys(data)[i]].original,
+          w: data[Object.keys(data)[i]].width,
+          h: data[Object.keys(data)[i]].height,
+          msrc: 'gallery/' + data[Object.keys(data)[i]].thumbnails.fit['400x250']
+      };
+      galleryItems.push(item);
+    }
+    newGalleryRow += '</div>';
+
+    newGalleryRow += '<div class="col text-left">';
+    if (i + 1 < Object.keys(data).length) {
+      i++;
+      newGalleryRow += '<a href="gallery/' + data[Object.keys(data)[i]].original + '" onclick="return onThumbnailsClick(this);" data-size="' + data[Object.keys(data)[i]].width + 'x' + data[Object.keys(data)[i]].height + '" data-pswp-uid="' + i + '">';
+      newGalleryRow += '<img src="gallery/' + data[Object.keys(data)[i]].thumbnails.fitHeight['250x250'] + '" itemprop="thumbnail" alt="" />';
+      newGalleryRow += '</a>';
+
+      item = {
+          src: 'gallery/' + data[Object.keys(data)[i]].original,
+          w: data[Object.keys(data)[i]].width,
+          h: data[Object.keys(data)[i]].height,
+          msrc: 'gallery/' + data[Object.keys(data)[i]].thumbnails.fit['400x250']
+      };
+      galleryItems.push(item);
+    }
+    newGalleryRow += '</div>';
+
+    newGalleryRow += '</div>';
+
+    $( "#gallery-photos-container" ).append(newGalleryRow);
+  }
+
+  document.getElementById('gallery-preload-bar').classList.add("d-none");
+  document.getElementById('gallery-photos-container').classList.remove("d-none");
+}
+
+function showGalleryErrorMessage() {
+  document.getElementById('gallery-preload-bar').classList.add("d-none");
+  document.getElementById('gallery-error-bar').classList.remove("d-none");
+}
+
+function loadGallery () {
+  $.ajax({
+    url: 'gallery-server.php',
+    type: 'POST',
+    dataType: 'json',
+    success: function(data, text, xhr){
+      showGallery(data);
+      return false;
+    },
+    error:function(data, text, error){
+      showGalleryErrorMessage();
+      return false;
+    }
+  });
+}
+
+(function() {
+
+  'use strict';
+  window.addEventListener('load', function() {
+    loadGallery();
+  }, false);
+})();
