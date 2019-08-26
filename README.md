@@ -24,7 +24,7 @@ The whole f-ing thing is built on [Twitter Bootstrap](https://getbootstrap.com/)
 ## Why is it all in the repo and not included on compilation or something?
 Well because there is no f-ing compilation or something, is there!? I was tired of that sht. I just want to grab code, change a few strings and pictures and make it online. I don't do it on daily basis, I don't have my environment set up for this sht and I don't want to be doing that. Ain't no one got time for that sht.
 
-## Do I need to configure someting to make it run?
+## Do I need to configure something to make it run?
 I strongly suggest to use absolute URIs. Since this is very static thing, you would need to go through the code and manualy insert your base URI to where ever needed. Do that. And I'm talking specificaly about index.html and js/main.js.
 
 ## Regarding PHP
