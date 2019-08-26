@@ -3,7 +3,7 @@ or JAFMS for shrt.
 
 The most simple responsive single page minisite or microsite template. Built on Twitter Bootstrap, all dependencies included, no compilation required. F-k it, it even works without PHP, if you don't need dynamic photo gallery handling. Pure static html + css + js website.
 
-Live example is currently available at [https://just-an-f-ing-microsite-skeleton-vtnovk529892.codeanyapp.com/](https://just-an-f-ing-microsite-skeleton-vtnovk529892.codeanyapp.com/).
+Live example is currently available at [https://justafingminisiteskeleton.com/](https://justafingminisiteskeleton.com/).
 
 ## What is it for?
 It's for when you need to make a f-ing nice looking mobile-first responsive single page micro/mini-site for your friend or whoever, but you do it like once or twice a year, so you don't have any tools for proper development up to date, so you ain't gonna be compiling lesses/sasses on boilerplates bowers gulps grunts f-ing shts.
