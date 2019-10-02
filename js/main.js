@@ -7,7 +7,7 @@
 * to make this cleaner and more readable, be my guest.
 *
 * GitHub: https://github.com/vinovak/just-a-f-ing-minisite-skeleton
-* 
+*
 */
 
 /**
@@ -104,7 +104,7 @@ function openPhotoSwipe(index, disableAnimation, fromURL, thumbnailElement) {
 function showGallery(data) {
   var item;
 
-  for (i = 0; i < Object.keys(data).length; i++) {    
+  for (i = 0; i < Object.keys(data).length; i++) {
     var newGalleryItem = '<a href="gallery/' + data[Object.keys(data)[i]].original + '" onclick="return onThumbnailsClick(this);" data-size="' + data[Object.keys(data)[i]].width + 'x' + data[Object.keys(data)[i]].height + '" data-pswp-uid="' + i + '">';
     newGalleryItem += '<img src="gallery/' + data[Object.keys(data)[i]].thumbnails.fitHeight['250x250'] + '" itemprop="thumbnail">';
     newGalleryItem += '</a>';

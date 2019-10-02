@@ -19,8 +19,8 @@
 * pictures and/or supported crop modes and sizes.
 *
 * It might sound very lame, but right now it's all I need. It has
-* absolutely zero ambition to do more than it does right now. 
-* So if it does not suit your needs, you are going to have to 
+* absolutely zero ambition to do more than it does right now.
+* So if it does not suit your needs, you are going to have to
 * improve it on you self, or just find another solution.
 *
 * Oh and it needs write permissions inside the gallery folder.
@@ -274,11 +274,11 @@ try {
   header("Content-Type: application/json; charset=UTF-8");
   echo json_encode($images);
 } catch (Exception $e) {
-  
+
   if (DEBUG_MODE) {
     throw $e;
   }
-  
+
   header("Content-Type: application/json; charset=UTF-8");
   http_response_code(500);
   echo json_encode(array("status_code: " => 500, "message" => "Something got f-... Went wrong."));
