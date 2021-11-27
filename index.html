@@ -34,42 +34,46 @@
   <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32">
   <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96">
 </head>
-<body data-spy="scroll" data-target="#navbar-collapse-main" data-offset="200">
+<body data-bs-spy="scroll" data-bs-target="#navbar-collapse-main" data-bs-offset="200">
 
   <nav class="navbar navbar-expand-xl fixed-top navbar-dark jafms-navbar" role="navigation">
-    <a class="navbar-brand ml-auto gray-text" href="#">
-      <img src="graphics/logo-250-min.png" height="64" alt="logo">
-    </a>
-    <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbar-collapse-main" aria-controls="navbar-collapse-main" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbar-collapse-main">
-      <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
-        <li class="nav-item ml-auto"><a class="nav-link" href="#bait">Bait</a></li>
-        <li class="nav-item ml-auto"><a class="nav-link" href="#things">Things</a></li>
-        <li class="nav-item ml-auto"><a class="nav-link" href="#little-break">Little break</a></li>
-        <li class="nav-item ml-auto"><a class="nav-link" href="#the-catch">The Catch</a></li>
-        <li class="nav-item ml-auto"><a class="nav-link" href="#happy-people">Happy people</a></li>
-        <li class="nav-item ml-auto"><a class="nav-link" href="#pictures">Pictures!</a></li>
-        <li class="nav-item ml-auto"><a class="nav-link" href="#another-break">Another break</a></li>
-        <li class="nav-item ml-auto"><a class="nav-link" href="#call-us">Call us</a></li>
-        <li class="nav-item ml-auto"><a class="nav-link" href="#about">Wtf is this sht!?</a></li>
-      </ul>
-    </div><!-- /.navbar-collapse -->
+    <div class="container-fluid">
+      <a class="navbar-brand ms-auto gray-text" href="#">
+        <img src="graphics/logo-250-min.png" height="64" alt="logo">
+      </a>
+      <button class="navbar-toggler ms-auto" type="button" data-toggle="collapse" data-target="#navbar-collapse-main" aria-controls="navbar-collapse-main" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbar-collapse-main">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="#bait">Bait</a></li>
+          <li class="nav-item"><a class="nav-link" href="#things">Things</a></li>
+          <li class="nav-item"><a class="nav-link" href="#little-break">Little break</a></li>
+          <li class="nav-item"><a class="nav-link" href="#the-catch">The Catch</a></li>
+          <li class="nav-item"><a class="nav-link" href="#happy-people">Happy people</a></li>
+          <li class="nav-item"><a class="nav-link" href="#pictures">Pictures!</a></li>
+          <li class="nav-item"><a class="nav-link" href="#another-break">Another break</a></li>
+          <li class="nav-item"><a class="nav-link" href="#call-us">Call us</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">Wtf is this sht!?</a></li>
+        </ul>
+      </div>
+    </div>
   </nav>
 
   <section id="bait">
     <div class="jafms-vbottom">
       <div class="container">
         <div class="row justify-content-center">
-          <div class="col-8">
-            <div id="intro-box" class="jumbotron jafms-semitransparent">
-              <h1 class="display-4">Exciting f-ing website!</h1>
-              <p class="lead d-none d-md-block">I have no idea how you could make it without our sht till today. It solves the exact f-ing problem you just have! And it's sooo f-ing simple.</p>
-              <hr class="my-4 d-none d-md-block">
-              <p class="d-none d-md-block">Just scroll the f-k down finally, will ya!?</p>
-              <a class="btn btn-outline-dark btn-lg d-none d-md-inline" href="#things" role="button">Scrool the sht out of it!</a>
-              <div style="position: relative; height: 50px; margin-top: 50px;"><div class="arrow bounce"><a href="#things" style="color: inherit;"><i class="fas fa-angle-double-down fa-3x" aria-hidden="true"></i></a></div></div>
+          <div class="col-7">
+            <div id="intro-box" class="p-5 mb-4 rounded-3 jafms-semitransparent">
+              <div class="container-fluid p-4">
+                <h1 class="display-4">Exciting f-ing website!</h1>
+                <p class="lead d-none d-md-block">I have no idea how you could make it without our sht till today. It solves the exact f-ing problem you just have! And it's sooo f-ing simple.</p>
+                <hr class="my-4 d-none d-md-block">
+                <p class="d-none d-md-block">Just scroll the f-k down finally, will ya!?</p>
+                <a class="btn btn-outline-dark btn-lg d-none d-md-inline" href="#things" role="button">Scrool the sht out of it!</a>
+                <div style="position: relative; height: 50px; margin-top: 50px;"><div class="arrow bounce"><a href="#things" style="color: inherit;"><i class="fas fa-angle-double-down fa-3x" aria-hidden="true"></i></a></div></div>
+              </div>
             </div>
           </div>
         </div>
@@ -90,7 +94,7 @@
   <section id="things" class="jafms-section jafms-section-primary jafms-section-textual">
     <div class="container">
 
-      <div class="row justify-content-center align-items-center">
+      <div class="row justify-content-center align-items-start">
         <div class="col-auto">
           <h1>Look at all this sht!</h1>
         </div>
@@ -102,62 +106,62 @@
         </div>
       </div>
 
-      <div class="row justify-content-left align-items-center jafms-vertical-spacing">
-        <div class="col-md-4 text-right align-self-right">
+      <div class="row justify-content-start align-items-center jafms-vertical-spacing">
+        <div class="col-md-4 text-end align-self-center">
           <img src="graphics/technology-1024-min.jpg" class="jafms-shadow" alt="technology" />
         </div>
-        <div class="col-md-8 text-left align-self-left">
+        <div class="col-md-8 text-start align-self-center">
           <h3>Technology</h3>
           <p class="lead">With technology, everything is f-ing possible! So we love technology like there is no tomorrow. Sometimes we love technology so much, we take it to a nice dinner somewhere cosy, where they have candles and sht and then we take it home, where... You know...</p>
         </div>
       </div>
 
-      <div class="row justify-content-left align-items-center jafms-vertical-spacing">
-        <div class="col-md-8 order-md-1 order-2 text-right align-self-right">
+      <div class="row justify-content-start align-items-center jafms-vertical-spacing">
+        <div class="col-md-8 order-md-1 order-2 text-end align-self-center">
           <h3>But also history as well</h3>
           <p class="lead">Without history, there's no technology. Without technology, tehere's no us. Without us, there's no motivation and no teamwork.</p>
         </div>
-        <div class="col-md-4 order-md-2 order-1 text-left align-self-left">
+        <div class="col-md-4 order-md-2 order-1 text-start align-self-center">
           <img src="graphics/history-1024-min.jpg" class="jafms-shadow" alt="history" />
         </div>
       </div>
 
-      <div class="row justify-content-left align-items-center jafms-vertical-spacing">
-        <div class="col-md-4 text-right align-self-right">
+      <div class="row justify-content-start align-items-center jafms-vertical-spacing">
+        <div class="col-md-4 text-end align-self-center">
           <img src="graphics/humans-and-robots-1024-min.jpg" class="jafms-shadow" alt="robots" />
         </div>
-        <div class="col-md-8 text-left align-self-left">
+        <div class="col-md-8 text-start align-self-center">
           <h3>Robots</h3>
           <p class="lead">Robots are cool. Especialy when touching humans.</p>
         </div>
       </div>
 
-      <div class="row justify-content-left align-items-center jafms-vertical-spacing">
-        <div class="col-md-8 order-md-1 order-2 text-right align-self-right">
+      <div class="row justify-content-start align-items-center jafms-vertical-spacing">
+        <div class="col-md-8 order-md-1 order-2 text-end align-self-center">
           <h3>Nature</h3>
           <p class="lead">Here mr. Sun, accept this f-ing tree as a symbol of our naturness.</p>
         </div>
-        <div class="col-md order-md-2 order-1 text-left align-self-left">
+        <div class="col-md-4 order-md-2 order-1 text-start align-self-center">
           <img src="graphics/nature-1024-min.jpg" class="jafms-shadow" alt="nature" />
         </div>
       </div>
 
-      <div class="row justify-content-left align-items-center jafms-vertical-spacing">
-        <div class="col-md-4 text-right align-self-right">
+      <div class="row justify-content-start align-items-center jafms-vertical-spacing">
+        <div class="col-md-4 text-end align-self-center">
           <img src="graphics/nature-and-technology-1024-min.jpg" class="jafms-shadow" alt="nature and technology" />
         </div>
-        <div class="col-md-8 text-left align-self-left">
+        <div class="col-md-8 text-start align-self-center">
           <h3>Nature and technology</h3>
           <p class="lead">What!? Yeah! Combine that you mother f-er! Bam!</p>
         </div>
       </div>
 
-      <div class="row justify-content-left align-items-center jafms-vertical-spacing">
-        <div class="col-md-8 order-md-1 order-2 text-right align-self-right">
+      <div class="row justify-content-start align-items-center jafms-vertical-spacing">
+        <div class="col-md-8 order-md-1 order-2 text-end align-self-center">
           <h3>Nature, technology and robors!</h3>
           <p class="lead">WHAT THE F-K!? Daaaaaamn that's f-ing awesome! We are f-ing awesome!</p>
         </div>
-        <div class="col-md-4 order-md-2 order-1 text-left align-self-left">
+        <div class="col-md-4 order-md-2 order-1 text-start align-self-center">
           <img src="graphics/nature-technology-robots-1024-min.jpg" class="jafms-shadow" alt="nature, technology and robots" />
         </div>
       </div>
@@ -180,11 +184,13 @@
       <div class="container">
         <div class="row justify-content-center">
           <div class="col">
-            <div class="jumbotron jafms-semitransparent">
-              <h1 class="display-4">WHOA! Calm the f-k down a bit, will ya!?</h1>
-              <p class="lead">Because <em>"F-k that sht." --Buddha, 1987</em></p>
-              <hr class="my-4">
-              <p>Now keep scrolling. Please.</p>
+            <div class="p-5 mb-4 rounded-3 jafms-semitransparent">
+              <div class="container-fluid p-4">
+                <h1 class="display-4">WHOA! Calm the f-k down a bit, will ya!?</h1>
+                <p class="lead">Because <em>"F-k that sht." --Buddha, 1987</em></p>
+                <hr class="my-4">
+                <p>Now keep scrolling. Please.</p>
+              </div>
             </div>
           </div>
         </div>
@@ -205,7 +211,7 @@
   <section id="the-catch" class="jafms-section jafms-section-primary jafms-section-textual">
     <div class="container">
 
-      <div class="row justify-content-center align-items-center">
+      <div class="row justify-content-center align-items-start">
         <div class="col-auto">
           <h1>Profit</h1>
         </div>
@@ -217,11 +223,11 @@
         </div>
       </div>
 
-      <div class="row justify-content-left align-items-center jafms-vertical-spacing">
-        <div class="col-md-4 text-right align-self-right">
+      <div class="row justify-content-start align-items-center jafms-vertical-spacing">
+        <div class="col-md-4 text-end">
           <img src="graphics/money-01-1024-min.jpg" class="jafms-shadow" alt="money" />
         </div>
-        <div class="col-md-8 text-center align-self-left">
+        <div class="col-md-8 text-center">
           <p class="lead"><em>"To earn money, one has to spend some first." --Socrates, 1892 b.c.</em></p>
         </div>
       </div>
@@ -275,21 +281,21 @@
                 <td><i class="fas fa-thumbs-up jafms-green"></i></td>
               </tr>
               <tr>
-                <th class="jafms-green">YOUR INVESTMENT</th>
-                <td class="jafms-green">$500</td>
-                <td class="jafms-green">$2500</td>
-                <td class="jafms-green">$399999999999999999999</td>
+                <th><span class="jafms-green">YOUR INVESTMENT</span></th>
+                <td><span class="jafms-green">$500</span></td>
+                <td><span class="jafms-green">$2500</span></td>
+                <td><span class="jafms-green">$399999999999999999999</span></td>
               </tr>
             </tbody>
           </table>
         </div>
       </div>
 
-      <div class="row justify-content-left align-items-center jafms-vertical-spacing">
-        <div class="col-md-8 text-right align-self-right">
+      <div class="row justify-content-start align-items-center jafms-vertical-spacing">
+        <div class="col-md-8 text-end">
           <p class="lead">Choose wisely now! If you give us money, you gonna be one rich mother f-er very soon! Trust us. We have a great website.</p>
         </div>
-        <div class="col-md-4 text-center align-self-left">
+        <div class="col-md-4 text-center">
           <img src="graphics/money-02-1024-min.jpg" class="jafms-shadow" alt="profit" />
         </div>
       </div>
@@ -310,7 +316,7 @@
   <section id="happy-people" class="jafms-section jafms-section-primary jafms-section-textual">
     <div class="container">
 
-      <div class="row justify-content-center align-items-center">
+      <div class="row justify-content-center align-items-start">
         <div class="col-auto">
           <h1>Look at all those happy mother f-ers!</h1>
         </div>
@@ -387,7 +393,7 @@
   <section id="pictures" class="jafms-section jafms-section-secondary">
     <div class="container">
 
-      <div class="row justify-content-center align-items-center">
+      <div class="row justify-content-center align-items-start">
         <div class="col-auto">
           <h1>Pictures. F-ing pictures!</h1>
         </div>
@@ -401,7 +407,7 @@
 
       <div class="row justify-content-center align-items-center jafms-vertical-spacing">
         <div class="col">
-          <div class="alert alert-danger text-left d-none" id="gallery-error-bar" role="alert">
+          <div class="alert alert-danger text-start d-none" id="gallery-error-bar" role="alert">
             <h4 class="alert-heading">F-k!</h4>
             <p>Something's f-ed. Try:</p>
             <ul>
@@ -411,7 +417,7 @@
             </ul>
             <p>If it didn't help a single f-ing bit, you're f-ed.</p>
           </div>
-          <div class="alert alert-secondary text-left" id="gallery-preload-bar" role="alert">
+          <div class="alert alert-secondary text-start" id="gallery-preload-bar" role="alert">
             <h4 class="alert-heading">
               <div class="spinner-border text-secondary" role="status">
                 <span class="sr-only">Loading the sht out of it...</span>
@@ -451,14 +457,16 @@
       <div class="container">
         <div class="row justify-content-center">
           <div class="col">
-            <div class="jumbotron jafms-semitransparent text-break">
-              <h1 class="display-4">Motivation! Communication!</h1>
-              <img src="graphics/team-01-400-min.jpg" class="jafms-shadow" alt="team" />
-              <img src="graphics/team-02-400-min.jpg" class="jafms-shadow" alt="team" />
-              <img src="graphics/team-03-400-min.jpg" class="jafms-shadow" alt="team" />
-              <img src="graphics/team-04-400-min.jpg" class="jafms-shadow" alt="team" />
-              <hr class="my-4">
-              <p>Achieve.</p>
+            <div class="p-5 mb-4 rounded-3 jafms-semitransparent text-break">
+              <div class="container-fluid p-4">
+                <h1 class="display-4">Motivation! Communication!</h1>
+                <img src="graphics/team-01-400-min.jpg" class="jafms-shadow" alt="team" />
+                <img src="graphics/team-02-400-min.jpg" class="jafms-shadow" alt="team" />
+                <img src="graphics/team-03-400-min.jpg" class="jafms-shadow" alt="team" />
+                <img src="graphics/team-04-400-min.jpg" class="jafms-shadow" alt="team" />
+                <hr class="my-4">
+                <p>Achieve.</p>
+              </div>
             </div>
           </div>
         </div>
@@ -479,7 +487,7 @@
   <section id="call-us" class="jafms-section jafms-section-primary jafms-section-textual">
     <div class="container">
 
-      <div class="row justify-content-center align-items-center">
+      <div class="row justify-content-center align-items-start">
         <div class="col-auto">
           <h1>Call us!</h1>
         </div>
@@ -539,7 +547,7 @@
         </div>
       </div>
 
-      <div class="row justify-content-left">
+      <div class="row justify-content-start">
         <div class="col-auto">
           <p>Confused? No need. This is an example template of an extremely nice and responsive minisite or microsite. It is completely free to use! Source code and more info is available on <a href="https://github.com/vinovak/just-a-f-ing-minisite-skeleton">Github</a>.</p>
           <p>
@@ -603,10 +611,10 @@
                   <div class="pswp__share-tooltip"></div>
               </div>
 
-              <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+              <button class="pswp__button pswp__button--arrow--start" title="Previous (arrow left)">
               </button>
 
-              <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+              <button class="pswp__button pswp__button--arrow--end" title="Next (arrow right)">
               </button>
 
               <div class="pswp__caption">
